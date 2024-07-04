@@ -1,7 +1,7 @@
 include:
 - project: zuso-rd-team/gitlab-ci-templates
   file:
-  - sec-report.yml
+  - base-sec-report.yml
   - common.yml
 
 unit-test:
