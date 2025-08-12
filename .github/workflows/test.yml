@@ -18,12 +18,12 @@ jobs:
         go-version: '1.24'
 
     - name: Test
-      run: go run gotest.tools/gotestsum@latest --junitfile unit-tests.xml --format pkgname
+      run: go run gotest.tools/gotestsum@latest --jsonfile go-test.json --format testname
     
     - name: Test Summary
-      uses: test-summary/action@v2.3
+      uses: dorny/test-reporter@v2
       with:
-        paths: "unit-tests.xml"
-        output: test-summary.md
-        show: "all"
-      if: always()
+        name: test-results
+        path: go-test.json
+        reporter: "golang-json"
+        report-title: 'Go Test Results'
