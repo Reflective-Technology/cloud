@@ -1,7 +1,7 @@
 name: Test
 on:
   push:
-    branches: [ "*" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -25,4 +25,5 @@ jobs:
       with:
         paths: "report.xml"
         output: test-summary.md
+        show: "all"
       if: always()
