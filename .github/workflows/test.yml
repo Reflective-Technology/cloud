@@ -26,4 +26,3 @@ jobs:
         name: test-results
         path: go-test.json
         reporter: "golang-json"
-        report-title: 'Go Test Results'
