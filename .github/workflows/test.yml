@@ -18,12 +18,12 @@ jobs:
         go-version: '1.24'
 
     - name: Test
-      run: go run gotest.tools/gotestsum@latest --junitfile report.xml --format testname
+      run: go run gotest.tools/gotestsum@latest --junitfile unit-tests.xml --format pkgname
     
     - name: Test Summary
       uses: test-summary/action@v2
       with:
-        paths: "report.xml"
+        paths: "unit-tests.xml"
         output: test-summary.md
         show: "all"
       if: always()
