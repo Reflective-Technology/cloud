@@ -24,4 +24,5 @@ jobs:
       uses: test-summary/action@v2
       with:
         paths: "report.xml"
+        output: test-summary.md
       if: always()
