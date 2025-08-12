@@ -34,6 +34,13 @@ func TestEmpty(t *testing.T) {
 	}
 }
 
+func TestAzure(t *testing.T) {
+	cloud.SetMode(cloud.AZURE)
+	if cloud.Mode() != cloud.AZURE {
+		t.Errorf(errorResult, cloud.AZURE, cloud.Mode())
+	}
+}
+
 func TestUnknown(t *testing.T) {
 	defer func() {
 		if r := recover(); r == nil {
