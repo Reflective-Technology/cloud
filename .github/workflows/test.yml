@@ -6,7 +6,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  Test:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
@@ -19,3 +19,9 @@ jobs:
 
     - name: Test
       run: go run gotest.tools/gotestsum@latest --junitfile report.xml --format testname
+    
+    - name: Test Summary
+      uses: test-summary/action@v2
+      with:
+        paths: "report.xml"
+      if: always()
