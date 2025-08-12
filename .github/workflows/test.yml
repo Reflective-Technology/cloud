@@ -21,7 +21,7 @@ jobs:
       run: go run gotest.tools/gotestsum@latest --junitfile unit-tests.xml --format pkgname
     
     - name: Test Summary
-      uses: test-summary/action@v2
+      uses: test-summary/action@v2.3
       with:
         paths: "unit-tests.xml"
         output: test-summary.md
