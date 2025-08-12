@@ -1,3 +1,3 @@
-module gitlab.tp.zuso.arpa/zuso-rd-team/go-pkg/cloud.git
+module github.com/Reflective-Technology/cloud
 
-go 1.22.4
+go 1.24

@@ -3,7 +3,7 @@ package cloud_test
 import (
 	"testing"
 
-	"gitlab.tp.zuso.arpa/zuso-rd-team/go-pkg/cloud.git"
+	"github.com/Reflective-Technology/cloud"
 )
 
 const (
