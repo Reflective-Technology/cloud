@@ -12,15 +12,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
-
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: "1.24"
-
+          go-version: "1.25"
       - name: Test
         run: go run gotest.tools/gotestsum@latest --jsonfile go-test.json --format testname
-
       - name: Test Summary
         uses: dorny/test-reporter@v2
         if: ${{ !cancelled() }}

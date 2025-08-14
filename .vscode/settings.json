@@ -1,5 +1,13 @@
 {
     "cSpell.words": [
-        "dotenv"
+        "dorny",
+        "dotenv",
+        "golangci",
+        "gomod",
+        "gotest",
+        "gotestsum",
+        "jsonfile",
+        "ncipollo",
+        "testname"
     ]
 }
