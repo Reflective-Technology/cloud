@@ -7,7 +7,9 @@
         "gotest",
         "gotestsum",
         "jsonfile",
+        "mathieudutour",
         "ncipollo",
-        "testname"
+        "testname",
+        "WyriHaximus"
     ]
 }
