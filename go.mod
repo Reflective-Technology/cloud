@@ -1,3 +1,3 @@
 module github.com/Reflective-Technology/cloud
 
-go 1.24
+go 1.25
