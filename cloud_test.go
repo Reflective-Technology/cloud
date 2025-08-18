@@ -41,6 +41,13 @@ func TestAzure(t *testing.T) {
 	}
 }
 
+func TestOnPremise(t *testing.T) {
+	cloud.SetMode(cloud.ON_PREMISE)
+	if cloud.Mode() != cloud.ON_PREMISE {
+		t.Errorf(errorResult, cloud.ON_PREMISE, cloud.Mode())
+	}
+}
+
 func TestUnknown(t *testing.T) {
 	defer func() {
 		if r := recover(); r == nil {

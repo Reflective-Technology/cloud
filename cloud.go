@@ -11,6 +11,7 @@ const (
 	AWS         = "aws"
 	GCP         = "gcp"
 	AZURE       = "azure"
+	ON_PREMISE  = "on-premise"
 	UNSPECIFIED = "unspecified"
 )
 
@@ -18,6 +19,7 @@ const (
 	awsCode = iota
 	gcpCode
 	azureCode
+	onPremiseCode
 	unspecifiedCode
 )
 
@@ -44,6 +46,8 @@ func SetMode(value string) {
 		atomic.StoreInt32(&appMode, gcpCode)
 	case AZURE:
 		atomic.StoreInt32(&appMode, azureCode)
+	case ON_PREMISE:
+		atomic.StoreInt32(&appMode, onPremiseCode)
 	case UNSPECIFIED:
 		atomic.StoreInt32(&appMode, unspecifiedCode)
 	default:
